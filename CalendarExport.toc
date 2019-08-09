@@ -1,0 +1,7 @@
+## Interface: 80200
+## Title: Calendar Export
+## Author: Thomas Gauges
+## Version: 0.1
+
+main.lua
+modules.xml
