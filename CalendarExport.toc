@@ -5,3 +5,4 @@
 
 main.lua
 modules.xml
+frames.xml

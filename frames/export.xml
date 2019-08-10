@@ -1,0 +1,71 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Frame name="CalendarExport_ExportFrame" resizable="true" movable="true" enableMouse="true" frameStrata="HIGH"
+           hidden="true">
+        <Size x="300" y="600"/>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture>
+                    <Color r="0" g="0" b="0" a="0.9"/>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Slider>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="5" y="-25"/>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT">
+                        <Offset x="-5" y="5"/>
+                    </Anchor>
+                </Anchors>
+                <Frames>
+                    <EditBox name="CalendarExport_ExportFrame_Content" autoFocus="false" multiLine="true">
+                        <Anchors>
+                            <Anchor point="TOPLEFT"/>
+                            <Anchor point="BOTTOMRIGHT"/>
+                        </Anchors>
+                        <Scripts>
+                            <OnEscapePressed>
+                                self:ClearFocus()
+                            </OnEscapePressed>
+                        </Scripts>
+                        <FontString inherits="GameFontNormal">
+                            <Anchors>
+                                <Anchor point="TOP"/>
+                            </Anchors>
+                        </FontString>
+                    </EditBox>
+                </Frames>
+            </Slider>
+            <Button>
+                <Size x="15" y="15"/>
+                <Anchors>
+                    <Anchor point="TOPRIGHT" relativeTo="$parent">
+                        <Offset x="-5" y="-5"/>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        self:GetParent():Hide()
+                    </OnClick>
+                </Scripts>
+                <NormalTexture file="Interface/BUTTONS/UI-Panel-MinimizeButton-Up"/>
+                <PushedTexture file="Interface/BUTTONS/UI-Panel-MinimizeButton-Down"/>
+                <DisabledTexture file="Interface/BUTTONS/UI-Panel-MinimizeButton-Disabled"/>
+                <HighlightTexture file="Interface/BUTTONS/UI-Panel-MinimizeButton-Highlight" alphaMode="ADD"/>
+            </Button>
+        </Frames>
+        <Scripts>
+            <OnLoad>
+                self:RegisterForDrag("LeftButton")
+            </OnLoad>
+            <OnDragStart>
+                self:StartMoving()
+            </OnDragStart>
+            <OnDragStop>
+                self:StopMovingOrSizing()
+            </OnDragStop>
+        </Scripts>
+    </Frame>
+</Ui>

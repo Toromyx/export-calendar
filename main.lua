@@ -1,1 +1,3 @@
-CalendarExport = {}
+CalendarExport = {
+    frames = {}
+}
