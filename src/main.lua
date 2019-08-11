@@ -1,3 +1,3 @@
 CalendarExport = {
-    frames = {}
+  frames = {}
 }
