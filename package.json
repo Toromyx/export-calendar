@@ -14,6 +14,9 @@
     "url": "https://github.com/Toromyx/export-calendar/issues"
   },
   "homepage": "https://github.com/Toromyx/export-calendar",
+  "scripts": {
+    "copy": "robocopy ./src \"C:\\Program Files (x86)\\World of Warcraft\\_retail_\\Interface\\addons\\CalendarExport\" /mir"
+  },
   "devDependencies": {
     "@prettier/plugin-lua": "0.0.1",
     "prettier": "^1.18.2"
