@@ -2,7 +2,7 @@ SLASH_CALENDAREXPORT1 = "/calexp"
 
 function printHelp()
     local events = CalendarExport.calendar.getAllEvents()
-    print("Type '\\calexp x' with being x one of:")
+    print("Type '/calexp x' with being x one of:")
     for i, event in ipairs(events) do
         print(i .. ": " .. event.title .. "(" .. event.startTime.hour .. ":" ..
                   event.startTime.minute .. ")")
