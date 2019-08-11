@@ -1,17 +1,21 @@
 local csv = {}
 
 function csv.formatCsv(table)
-    local out = ""
-    local numRows = #table
-    for i, row in ipairs(table) do
-        local numCols = #row
-        for j, col in ipairs(row) do
-            out = out .. '"' .. col .. '"'
-            if (j < numCols) then out = out .. "," end
-        end
-        if (i < numRows) then out = out .. "\n" end
+  local out = ''
+  local numRows = #table
+  for i, row in ipairs(table) do
+    local numCols = #row
+    for j, col in ipairs(row) do
+      out = out .. '"' .. col .. '"'
+      if (j < numCols) then
+        out = out .. ','
+      end
     end
-    return out
+    if (i < numRows) then
+      out = out .. '\n'
+    end
+  end
+  return out
 end
 
 CalendarExport.csv = csv
