@@ -1,6 +1,6 @@
 local calendar = {}
 
-function getFilteredEvents()
+local function getFilteredEvents()
   local events = {}
   local currTime = C_DateAndTime.GetCurrentCalendarTime()
   local numEvents = C_Calendar.GetNumDayEvents(0, currTime.monthDay)
@@ -13,9 +13,6 @@ function getFilteredEvents()
     end
   end
   return events
-end
-
-function getInviteStatusString()
 end
 
 function calendar.getEvent(eventIndex)
