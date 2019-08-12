@@ -1,5 +1,6 @@
 ## Interface: 80200
 ## Title: Calendar Export
+## Notes: Provides functionality to export calendar invite status, type /calexp.
 ## Author: Thomas Gauges
 ## Version: 0.1
 
