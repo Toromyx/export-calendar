@@ -6,7 +6,7 @@ function csv.formatCsv(table)
   for i, row in ipairs(table) do
     local numCols = #row
     for j, col in ipairs(row) do
-      out = out .. '"' .. col .. '"'
+      out = out .. col
       if (j < numCols) then
         out = out .. ','
       end
