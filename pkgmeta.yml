@@ -1,8 +1,5 @@
 package-as: ExportCalendar
 
-move-folders:
-  ExportCalendar/src: ExportCalendar
-
 ignore: # Files and directories beginning with a dot (such as .git) are automatically ignored, as is the pgkmeta file itself.
   - package.json
   - package-lock.json

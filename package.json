@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "A simple addon for exporting calendar invite status into a usable format to copy and use outsie of WoW.",
-  "main": "src/CalendarExport.toc",
+  "main": "CalendarExport.toc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Toromyx/export-calendar.git"
@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/Toromyx/export-calendar",
   "scripts": {
-    "copy": "robocopy ./src \"C:\\Program Files (x86)\\World of Warcraft\\_retail_\\Interface\\addons\\CalendarExport\" /mir"
+    "copy": "robocopy . \"C:\\Program Files (x86)\\World of Warcraft\\_retail_\\Interface\\addons\\CalendarExport\" /mir /xd \".*\" \"node_modules\" /xf \".*\" \"pkgmeta.yml\" \"package.json\" \"package-lock.json\""
   },
   "devDependencies": {
     "@prettier/plugin-lua": "0.0.1",
