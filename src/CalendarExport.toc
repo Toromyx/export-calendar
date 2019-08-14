@@ -2,7 +2,7 @@
 ## Title: Calendar Export
 ## Notes: Provides functionality to export calendar invite status, type /calexp.
 ## Author: Thomas Gauges
-## Version: 0.1
+## Version: 0.2
 
 main.lua
 modules.xml
