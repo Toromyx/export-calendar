@@ -4,7 +4,7 @@ function printHelp()
   local events = CalendarExport.calendar.getAllEvents()
   print("Type '/calexp x' with being x one of:")
   for i, event in ipairs(events) do
-    print(i .. ': ' .. event.title .. ' (' .. event.startTime.hour .. ':' .. event.startTime.minute .. ')')
+    print(i .. ': ' .. event.title .. ' (' .. GameTime_GetFormattedTime(event.startTime.hour, event.startTime.minute) .. ')')
   end
 end
 
