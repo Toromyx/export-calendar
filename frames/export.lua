@@ -2,8 +2,6 @@ local export = {}
 local frame = CalendarExport_ExportFrame
 local content = CalendarExport_ExportFrame_Content
 
-export.frame = frame
-
 function export.show()
   frame:SetPoint('CENTER', 0, 0)
   frame:Show()
