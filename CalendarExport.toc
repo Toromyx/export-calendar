@@ -2,7 +2,7 @@
 ## Title: Calendar Export
 ## Notes: Provides functionality to export calendar invite status, type /calexp.
 ## Author: Thomas Gauges
-## Version: 0.2
+## Version: 8.2.0v1
 ## Dependencies: Blizzard_Calendar
 
 main.lua

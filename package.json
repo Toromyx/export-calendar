@@ -1,7 +1,7 @@
 {
   "name": "wow-addon-calendarexport",
   "private": true,
-  "version": "1.0.0",
+  "version": "8.2.0v1",
   "description": "A simple addon for exporting calendar invite status into a usable format to copy and use outsie of WoW.",
   "main": "CalendarExport.toc",
   "repository": {
