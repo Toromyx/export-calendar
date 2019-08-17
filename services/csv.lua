@@ -1,6 +1,6 @@
-local csv = {}
+local csvService = {}
 
-function csv.formatCsv(table)
+function csvService.formatCsv(table)
   local out = ''
   local numRows = #table
   for i, row in ipairs(table) do
@@ -18,4 +18,4 @@ function csv.formatCsv(table)
   return out
 end
 
-CalendarExport.csv = csv
+CalendarExport.csvService = csvService
