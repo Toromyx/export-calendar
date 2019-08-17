@@ -16,15 +16,20 @@ function eventService.subscribe(event, callback, multiple, isCorrectEvent)
   end
   local id = CalendarExport.uid()
   local callbackWrapper = function(...)
+
+    local callbackAndUnsubscribe = function(...)
+      callback(...)
+      if not multiple then
+        eventService.unsubscribe(event, id)
+      end
+    end
+
     if isCorrectEvent then
       if isCorrectEvent(...) then
-        callback(...)
+        callbackAndUnsubscribe(...)
       end
     else
-      callback(...)
-    end
-    if not multiple then
-      eventService.unsubscribe(event, id)
+      callbackAndUnsubscribe(...)
     end
   end
   table.insert(events[event], id, callbackWrapper)
